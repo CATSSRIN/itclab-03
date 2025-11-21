@@ -9,7 +9,7 @@ except:
     import serial
 from serial.tools import list_ports
         
-class iTCLab(object):
+class iMCLab(object):
 
     def __init__(self, port=None, baud=115200):
         port = self.findPort()
@@ -18,7 +18,7 @@ class iTCLab(object):
         self.sp.flushInput()
         self.sp.flushOutput()
         time.sleep(3)
-        print('iTCLab connected via Arduino on port ' + port)
+        print('iMCLab connected via Arduino on port ' + port)
         
     def findPort(self):
         found = False
@@ -87,12 +87,12 @@ class iTCLab(object):
         return pwm
 
     def Q1(self,pwm):
-        pwm = max(0.0,min(100.0,pwm)) 
+        pwm = max(0.0,min(225.0,pwm)) 
         self.write('Q1',pwm)
         return pwm
         
     def Q2(self,pwm):
-        pwm = max(0.0,min(100.0,pwm)) 
+        pwm = max(0.0,min(255.0,pwm)) 
         self.write('Q2',pwm)
         return pwm
 
