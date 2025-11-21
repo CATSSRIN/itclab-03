@@ -34,6 +34,8 @@ const int pinT2   = 35;         // T2
 const int pinQ1   = 32;         // Q1
 const int pinQ2   = 33;         // Q2
 const int pinLED  = 26;         // LED
+//pin nya diganti
+
 
 //Q1 32 - T1 34
 //Q2 33 - T2 35
@@ -195,3 +197,4 @@ void loop() {
   dispatchCommand();
   checkTemp();
 }
+
